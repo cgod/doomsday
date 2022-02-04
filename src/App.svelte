@@ -80,20 +80,14 @@
   button {
     display: block;
     width: 100%;
+    height: 3rem;
   }
 
   #content {
     display: block;
     width: 75%;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .error {
-    color: red;
-  }
-
-  .success {
-    color: green;
   }
 </style>
