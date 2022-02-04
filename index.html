@@ -11,6 +11,33 @@
 	<link rel='stylesheet' href='./build/bundle.css'>
 
 	<script defer src='./build/bundle.js'></script>
+
+  <style>
+    .success {
+      color: green;
+    }
+
+    .error {
+      color: red;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #333;
+        color: #f4f4f4;
+      }
+
+      .success {
+        background-color: green;
+        color: black;
+      }
+
+      .error {
+        background-color: red;
+        color: black;
+      }
+    }
+  </style>
 </head>
 
 <body>
