@@ -23,14 +23,15 @@
 
   function guess(idx) {
     if (date.getDay() == idx) {
+      message_class = "success";
       message = "You got it!";
       stats.wins += 1;
+      update_date();
     } else {
-      message = "Nope! It was " + days[date.getDay()].name;
+      message_class = "error";
+      message = "Nope, try again!";
       stats.losses += 1;
     }
-
-    update_date();
 
     setTimeout(function () {
       message = "";
@@ -39,6 +40,7 @@
 
   let date;
   let message = "";
+  let message_class = "";
 
   let stats = {
     wins: 0,
@@ -63,17 +65,14 @@
     </button>
   {/each}
 
-  <p>{message}</p>
   <p>
-    {stats.wins} win{stats.wins === 1 ? "" : "s"},
+    {stats.wins} win{stats.wins === 1 ? "" : "s"} • 
     {stats.losses} loss{stats.losses === 1 ? "" : "es"}
+    {#if message} • <span class={message_class}>{message}</span>{/if}
   </p>
 </div>
 
 <style>
-  .buttons {
-  }
-
   h1 {
     text-align: center;
   }
@@ -88,5 +87,13 @@
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .error {
+    color: red;
+  }
+
+  .success {
+    color: green;
   }
 </style>
