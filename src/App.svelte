@@ -87,7 +87,4 @@
     margin-right: auto;
   }
 
-  .right-answer {
-    background-color: green;
-  }
 </style>
