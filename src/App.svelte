@@ -1,4 +1,5 @@
 <script>
+  import { stats } from './store.js';
   import { Body } from 'svelte-body';
 
   let days = [
@@ -26,11 +27,11 @@
   function guess(idx) {
     if (date.getDay() == idx) {
       body_class = "right-answer";
-      stats.wins += 1;
+      $stats.wins += 1;
       update_date();
     } else {
       body_class = "wrong-answer";
-      stats.losses += 1;
+      $stats.losses += 1;
     }
 
     setTimeout(function () {
@@ -40,11 +41,6 @@
 
   let date;
   let body_class = "";
-
-  let stats = {
-    wins: 0,
-    losses: 0,
-  };
 
   update_date();
 
@@ -65,8 +61,8 @@
   {/each}
 
   <p>
-    {stats.wins} win{stats.wins === 1 ? "" : "s"} • 
-    {stats.losses} loss{stats.losses === 1 ? "" : "es"}
+    {$stats.wins} win{$stats.wins === 1 ? "" : "s"} • 
+    {$stats.losses} loss{$stats.losses === 1 ? "" : "es"}
   </p>
 </div>
 
