@@ -1,4 +1,6 @@
 <script>
+  import { Body } from 'svelte-body';
+
   let days = [
     { name: "Sunday", index: 0 },
     { name: "Monday", index: 1 },
@@ -23,24 +25,21 @@
 
   function guess(idx) {
     if (date.getDay() == idx) {
-      message_class = "success";
-      message = "You got it!";
+      body_class = "right-answer";
       stats.wins += 1;
       update_date();
     } else {
-      message_class = "error";
-      message = "Nope, try again!";
+      body_class = "wrong-answer";
       stats.losses += 1;
     }
 
     setTimeout(function () {
-      message = "";
-    }, 2500);
+      body_class = "";
+    }, 500);
   }
 
   let date;
-  let message = "";
-  let message_class = "";
+  let body_class = "";
 
   let stats = {
     wins: 0,
@@ -68,9 +67,10 @@
   <p>
     {stats.wins} win{stats.wins === 1 ? "" : "s"} • 
     {stats.losses} loss{stats.losses === 1 ? "" : "es"}
-    {#if message} • <span class={message_class}>{message}</span>{/if}
   </p>
 </div>
+
+<Body class={body_class} />
 
 <style>
   h1 {
@@ -89,5 +89,9 @@
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .right-answer {
+    background-color: green;
   }
 </style>

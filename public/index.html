@@ -21,10 +21,26 @@
       color: red;
     }
 
+    body.right-answer {
+      background-color: green;
+    }
+
+    body.wrong-answer {
+      background-color: red;
+    }
+
     @media (prefers-color-scheme: dark) {
       body {
         background-color: #333;
         color: #f4f4f4;
+      }
+
+      body.right-answer {
+        background-color: #008b8b;
+      }
+
+      body.wrong-answer {
+        background-color: #8b0000;
       }
 
       .success {
