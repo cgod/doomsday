@@ -37,10 +37,21 @@
     setTimeout(function () {
       body_class = "";
     }, 500);
+
+    // seven sundays in a row will reset stats
+    if(idx == 0) sundays += 1;
+    else sundays = 0;
+
+    if(sundays == 7) {
+      sundays = 0;
+      $stats.wins = 0;
+      $stats.losses = 0;
+    }
   }
 
   let date;
   let body_class = "";
+  let sundays = 0;
 
   update_date();
 
