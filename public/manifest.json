@@ -10,8 +10,8 @@
 	],
 	"start_url": "./",
 	"scope": ".",
+	"theme_color": "#303030",
 	"background_color": "#35c3f6",
 	"display": "standalone",
-	"theme_color": "#3367D6",
 	"description": "Calculate days of the week... if you can"
 }
