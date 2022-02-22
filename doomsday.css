@@ -21,11 +21,11 @@ body.wrong-answer {
   }
 
   body.right-answer {
-    background-color: #008b8b;
+    background-color: #005fe3;
   }
 
   body.wrong-answer {
-    background-color: #8b0000;
+    background-color: #b30000;
   }
 
   .success {
