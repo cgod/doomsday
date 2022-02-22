@@ -6,12 +6,25 @@
 
 	<title>Doomsday</title>
 
+  <link rel='manifest' href='./manifest.json'>
 	<link rel='icon' type='image/png' href='./favicon.png'>
 	<link rel='stylesheet' href='./global.css'>
 	<link rel='stylesheet' href='./doomsday.css'>
 	<link rel='stylesheet' href='./build/bundle.css'>
 
 	<script defer src='./build/bundle.js'></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+          console.log('Registration successful');
+        })
+        .catch(function(error) {
+          console.log('Service worker registration failed, error:', error);
+        });
+    }
+  </script>
 </head>
 
 <body>
