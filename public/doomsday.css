@@ -7,11 +7,13 @@
 }
 
 body.right-answer {
-  background-color: green;
+  background-color: #005fe3;
+  color: white;
 }
 
 body.wrong-answer {
-  background-color: red;
+  background-color: #b30000;
+  color: white;
 }
 
 @media (prefers-color-scheme: dark) {
