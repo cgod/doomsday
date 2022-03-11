@@ -3,9 +3,9 @@
 	"name": "Doomsday",
 	"icons": [
 		{
-			"src": "favicon.png",
+			"src": "meteor",
 			"type": "image/png",
-			"sizes": "200x200"
+			"sizes": "144x144"
 		}
 	],
 	"start_url": "./",
