@@ -4,7 +4,7 @@
 	"icons": [
 		{
 			"src": "meteor.svg",
-			"type": "image/svg",
+			"type": "image/svg+xml",
 			"sizes": "144x144"
 		}
 	],
