@@ -3,8 +3,8 @@
 	"name": "Doomsday",
 	"icons": [
 		{
-			"src": "meteor",
-			"type": "image/png",
+			"src": "meteor.svg",
+			"type": "image/svg",
 			"sizes": "144x144"
 		}
 	],
